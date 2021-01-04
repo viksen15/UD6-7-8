@@ -1,0 +1,19 @@
+using System;
+
+namespace EjerciciM1
+{
+    class Milestone3
+    {
+        static void Main(string[] args)
+        {
+            int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            Console.WriteLine("Array: {0}", string.Join("," ,array));
+            var temp = array[0];
+            for (var i=0; i<array.Length - 1; i++)
+            { array[i] = array[i + 1];
+            }
+            array[array.Length - 1] = temp;
+            Console.WriteLine("Al rotar obtenemos: {0}", string.Join(", ",array));
+        }
+    }
+}

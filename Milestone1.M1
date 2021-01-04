@@ -1,0 +1,52 @@
+using System;
+
+namespace EjerciciM1
+{
+    class Milestone1
+    {
+        static void Main(string[] args)
+        {
+            string nom = "Viksen";
+            string cognom1 = "Senkov";
+            string cognom2 = "Vasilev";
+            int dia=15, mes=12, any=1995;
+
+            Console.WriteLine(cognom1 + ", " + cognom2 + ", " + nom);
+            Console.WriteLine("");
+            Console.WriteLine(dia + "/" + mes + "/" + any);
+            Console.WriteLine("");
+
+            const int anyT = 1948;
+            for (int i=anyT; i<=any;i++)
+            { if (i % 4 == 0 && (i % 100 != 0 || i % 400 == 0))
+                {
+                    Console.WriteLine("Any de traspas: " + i); }
+            }
+            Console.WriteLine("");
+
+
+            string nomCognoms = nom +" "+ cognom1 +" "+ cognom2;
+            Console.WriteLine("El meu nom es: " + nomCognoms);
+            string dataNaix = dia + "/" + mes + "/" + any;
+            Console.WriteLine("Vaig neixer el: " + dataNaix);
+
+            bool esTraspas = false;
+            for (int i = any; i <= any; i++)
+            {
+                if (i % 4 == 0 && (i % 100 != 0 || i % 400 == 0))
+                {
+                    esTraspas = true;
+                }else { esTraspas = false; }
+                if (esTraspas==true)
+                {
+                    Console.WriteLine("L'any " + i + "es de traspas");
+                }else { Console.WriteLine("L'any " + i + " no es de traspas");
+                }
+            }
+
+
+            Console.ReadKey();
+
+        }
+    }
+}

@@ -1,0 +1,24 @@
+using System;
+
+namespace EjerciciM1
+{
+    class Milestone2
+    {
+        static void Main(string[] args)
+        {
+            double decimalDouble = 4.6587;
+            int decimalInt;
+            float decimalFloat;
+            string decimalString;
+
+            decimalInt = (int)decimalDouble;
+            Console.WriteLine("De double a Int " + decimalInt);
+
+            decimalFloat = (float)decimalDouble;
+            Console.WriteLine("De double a Float " + decimalFloat);
+
+            decimalString = decimalDouble.ToString();
+            Console.WriteLine("De double a String " + decimalString);
+        }
+    }
+}
